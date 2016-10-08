@@ -18,7 +18,7 @@ State management is handled with Redux (alongside with react-redux for connect-b
 Navigation bar and drawer menu are used for [navigation](https://facebook.github.io/react-native/docs/navigator.html) - when the page is changed from drawer menu, the whole navigation stack is replaced so that only the selected item remains in the navigator. Root app provides `pushRoute` and `popRoute` methods for every scene it renders, so that subviews can be pushed on top of the navigator stack from inside the scenes.
 
 ### Promises
-Custom middleware is implemented (slightly modified from [here](http://redux.js.org/docs/advanced/Middleware.html)), so that every dispatched action with promise payload emits two different actions: first with PENDING status when the promise execution starts, and either SUCCESS or ERROR result (with data and error items respectively) when the promise is resolved or rejected.
+Custom middleware is implemented (slightly modified from [here](http://redux.js.org/docs/advanced/Middleware.html)), so that every dispatched action with promise payload emits two different actions: first with PENDING status when the promise execution starts, and either SUCCESS or ERROR result (with data and error items respectively) when the promise is resolved or rejected. Note that promise actions are not FSA compliant, this is by design.
 
 ### Tests
 Run with `npm test`
