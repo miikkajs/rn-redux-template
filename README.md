@@ -1,5 +1,5 @@
 # rn-redux-template
-This is a React Native project template with redux, navigator, sidemenu (drawer) and [icons](https://github.com/oblador/react-native-vector-icons).
+This is a React Native project template with redux, navigator, sidemenu (drawer) and [icons](https://github.com/oblador/react-native-vector-icons). The motivation of this project is to make it easier (for me or anyone else) to start a fresh RN project with redux, and with the examples provided maybe even learn something new!
 
 ## iOS
 Does not exist yet
@@ -21,6 +21,8 @@ Navigation bar and drawer menu are used for [navigation](https://facebook.github
 Custom middleware is implemented (slightly modified from [here](http://redux.js.org/docs/advanced/Middleware.html)), so that every dispatched action with promise payload emits two different actions: first with PENDING status when the promise execution starts, and either SUCCESS or ERROR result (with data and error items respectively) when the promise is resolved or rejected.
 
 ### Tests
+Run with `npm test`
+
   * [Jest](https://facebook.github.io/jest/) provides a test-runner, jasmine assertions, basic mocking and snapshot rendering
   * [Enzyme](https://github.com/airbnb/enzyme/) is used for component testing
   * [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store) is used to test redux action creators and middleware
