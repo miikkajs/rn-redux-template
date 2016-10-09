@@ -7,9 +7,9 @@ describe('Dashboard reducer tests', () => {
 
     const initialState = {
         text: "",
-        time: {
+        data: {
             status: results.ASYNC_RESULT_NONE,
-            data: null,
+            result: null,
             error: null,
         }
     };
@@ -23,35 +23,35 @@ describe('Dashboard reducer tests', () => {
         const action = {type: actions.GET_TEXT, text: 'foo'};
         const newState = reducer(undefined, action);
         expect(newState.text).toEqual(action.text);
-        expect(newState.time).toEqual(initialState.time);
+        expect(newState.data).toEqual(initialState.data);
         done();
     });
 
-    it('Should set data for time object and set error to null on successful result', done => {
+    it('Should set data for data object and set error to null on successful result', done => {
         const action = {
-            type: actions.GET_TIME_ASYNC,
+            type: actions.GET_DATA_ASYNC,
             status: results.ASYNC_RESULT_SUCCESS,
             result: 'Promise was resolved with this text'
         };
-        const oldState = {time: {...initialState.time, error: new Error('foo')}};
+        const oldState = {data: {...initialState.data, error: new Error('foo')}};
         const newState = reducer(oldState, action);
-        expect(newState.time.status).toEqual(results.ASYNC_RESULT_SUCCESS);
-        expect(newState.time.data).toEqual(action.result);
-        expect(newState.time.error).toEqual(null);
+        expect(newState.data.status).toEqual(results.ASYNC_RESULT_SUCCESS);
+        expect(newState.data.result).toEqual(action.result);
+        expect(newState.data.error).toEqual(null);
         done();
     });
 
     it('Should preserve old data and set error on failed result', done => {
         const action = {
-            type: actions.GET_TIME_ASYNC,
+            type: actions.GET_DATA_ASYNC,
             status: results.ASYNC_RESULT_ERROR,
             error: new Error('foo')
         };
-        const oldState = {time: {...initialState.time, data: 'foo'}};
+        const oldState = {data: {...initialState.data, result: 'foo'}};
         const newState = reducer(oldState, action);
-        expect(newState.time.status).toEqual(results.ASYNC_RESULT_ERROR);
-        expect(newState.time.data).toEqual(oldState.time.data);
-        expect(newState.time.error).toEqual(action.error);
+        expect(newState.data.status).toEqual(results.ASYNC_RESULT_ERROR);
+        expect(newState.data.result).toEqual(oldState.data.result);
+        expect(newState.data.error).toEqual(action.error);
         done();
     });
 });

@@ -31,7 +31,7 @@ describe('Dashboard action tests', () => {
         const dispatchedActions = store.getActions();
 
         expect(dispatchedActions.length).toBe(1);
-        expect(dispatchedActions[0].type).toEqual(actions.GET_TIME_ASYNC);
+        expect(dispatchedActions[0].type).toEqual(actions.GET_DATA_ASYNC);
         expect(await dispatchedActions[0].promise).toEqual(text);
         done();
     });

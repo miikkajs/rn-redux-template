@@ -3,9 +3,9 @@ import {actions} from '../actions/dashboard';
 
 const initialState = {
     text: "",
-    time: {
+    data: {
         status: results.ASYNC_RESULT_NONE,
-        data: null,
+        result: null,
         error: null,
     }
 };
@@ -16,11 +16,11 @@ export default function dashboard(state = initialState, action) {
             return Object.assign({}, state, {
                 text: action.text
             });
-        case actions.GET_TIME_ASYNC:
+        case actions.GET_DATA_ASYNC:
             return Object.assign({}, state, {
-                time: {
+                data: {
                     status: action.status,
-                    data: action.result || state.time.data,
+                    result: action.result || state.data.result,
                     error: action.error || null
                 }
             });
