@@ -8,7 +8,7 @@ import scene from '../../scenes/Dashboard';
 const mapStateToProps = (state) => {
     return {
         text: state.dashboard.text,
-        time: state.dashboard.time
+        data: state.dashboard.data
     };
 };
 

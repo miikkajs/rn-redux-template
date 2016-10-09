@@ -13,10 +13,10 @@ export default class Dashboard extends Component {
         this.props.getInstructions();
     }
 
-    displayTime() {
-        if (this.props.time.data) {
+    displayData() {
+        if (this.props.data.result) {
             return (
-                <Text style={styles.text}>{this.props.time.data}</Text>
+                <Text style={styles.text}>{this.props.data.result}</Text>
             )
         }
     }
@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
             <View>
                 <View style={styles.container}>
                     <Text style={styles.text}>{this.props.text}</Text>
-                    {this.displayTime()}
+                    {this.displayData()}
                     <Button label={"Download"} icon={"get-app"} onClick={this.props.getAsyncResult}/>
                 </View>
                 <View style={styles.container}>
