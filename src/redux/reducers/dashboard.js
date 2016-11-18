@@ -7,7 +7,8 @@ const initialState = {
         status: results.ASYNC_RESULT_NONE,
         result: null,
         error: null,
-    }
+    },
+    // selectedButtonGroupButton: "cat",
 };
 
 export default function dashboard(state = initialState, action) {
@@ -24,6 +25,10 @@ export default function dashboard(state = initialState, action) {
                     error: action.error || null
                 }
             });
+        // case actions.SET_BTNGRP_VALUE:
+        //     return Object.assign({}, state, {
+        //         selectedButtonGroupButton: action.value
+        //     });
         default:
             return state;
     }

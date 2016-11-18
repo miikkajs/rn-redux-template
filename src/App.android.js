@@ -10,7 +10,7 @@ import {
     ScrollView
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import SideMenu from './components/SideMenu';
+import SideMenu from './components/SideMenu/SideMenu';
 import router from './Router';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;

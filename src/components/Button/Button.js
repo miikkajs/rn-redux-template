@@ -10,11 +10,8 @@ export default class Button extends Component {
         onClick: PropTypes.func,
         disabled: PropTypes.bool,
         label: PropTypes.string,
-        style: PropTypes.oneOf([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
-        labelStyle: PropTypes.oneOf([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
         icon: PropTypes.string,
         iconSize: PropTypes.number,
-        iconStyle: PropTypes.oneOf([PropTypes.object, PropTypes.arrayOf(PropTypes.object)])
     };
 
     static defaultProps = {

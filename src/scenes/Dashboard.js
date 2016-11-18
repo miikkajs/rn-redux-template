@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
+import ButtonGroup from '../components/ButtonGroup/ButtonGroup';
 
 const SUB_VIEW = {
     scene: 'Details',
@@ -33,6 +34,12 @@ export default class Dashboard extends Component {
                     <Text style={styles.text}>Click button to display a subview</Text>
                     <Button label={"View"} icon={"visibility"} onClick={() => this.props.pushRoute(SUB_VIEW)}/>
                 </View>
+{/*                <View style={styles.container}>
+                    <ButtonGroup
+                        selected={this.props.selectedButtonGroupButton}
+                        buttonLabels={["cat", "dog", "horse"]}
+                        onSelect={this.props.setActiveButtonGroupButton}/>
+                </View>*/}
             </View>
         );
     }

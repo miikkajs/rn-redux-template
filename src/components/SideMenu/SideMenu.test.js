@@ -1,4 +1,4 @@
-import SideMenu from '../SideMenu';
+import SideMenu from './SideMenu';
 import {Text} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';

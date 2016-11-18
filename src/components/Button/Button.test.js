@@ -1,5 +1,5 @@
 'use strict';
-import Button from '../Button';
+import Button from './Button';
 import {Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';

@@ -1,0 +1,91 @@
+exports[`ButtonGroup renders label for group and buttons for each item in buttonLabels array 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 15,
+          "marginBottom": 5,
+        },
+      ]
+    }>
+    foo
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "#000",
+        "borderLeftWidth": 1,
+        "flexDirection": "row",
+      }
+    }>
+    <Button
+      label="one"
+      labelStyle={
+        Array [
+          Array [
+            Object {
+              "color": "#000",
+            },
+          ],
+        ]
+      }
+      onClick={[Function]}
+      style={
+        Array [
+          Array [
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#000",
+              "borderLeftWidth": 0,
+              "borderRadius": 0,
+              "borderWidth": 1,
+              "paddingBottom": 2,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 2,
+            },
+          ],
+        ]
+      } />
+    <Button
+      label="two"
+      labelStyle={
+        Array [
+          Array [
+            Object {
+              "color": "#000",
+            },
+          ],
+        ]
+      }
+      onClick={[Function]}
+      style={
+        Array [
+          Array [
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#000",
+              "borderLeftWidth": 0,
+              "borderRadius": 0,
+              "borderWidth": 1,
+              "paddingBottom": 2,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 2,
+            },
+          ],
+        ]
+      } />
+  </View>
+</View>
+`;
