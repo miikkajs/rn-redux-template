@@ -10,7 +10,7 @@ describe('ButtonGroup', () => {
     const labels = ['one', 'two'];
 
     it('renders label for group and buttons for each item in buttonLabels array', done => {
-        const group = <ButtonGroup label='foo' buttonLabels={labels} onSelect={jest.fn()}/>;
+        const group = <ButtonGroup buttonLabels={labels} onSelect={jest.fn()}/>;
         expect(renderer.create(group)).toMatchSnapshot();
         done();
     });

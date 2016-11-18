@@ -34,12 +34,12 @@ export default class Dashboard extends Component {
                     <Text style={styles.text}>Click button to display a subview</Text>
                     <Button label={"View"} icon={"visibility"} onClick={() => this.props.pushRoute(SUB_VIEW)}/>
                 </View>
-{/*                <View style={styles.container}>
+                <View style={styles.container}>
                     <ButtonGroup
                         selected={this.props.selectedButtonGroupButton}
                         buttonLabels={["cat", "dog", "horse"]}
                         onSelect={this.props.setActiveButtonGroupButton}/>
-                </View>*/}
+                </View>
             </View>
         );
     }

@@ -1,14 +1,14 @@
 import {results} from '../middleware/readyStatePromise';
 import {actions} from '../actions/dashboard';
 
-const initialState = {
+export const initialState = {
     text: "",
     data: {
         status: results.ASYNC_RESULT_NONE,
         result: null,
         error: null,
     },
-    // selectedButtonGroupButton: "cat",
+    selectedButtonGroupButton: "cat",
 };
 
 export default function dashboard(state = initialState, action) {
@@ -25,10 +25,10 @@ export default function dashboard(state = initialState, action) {
                     error: action.error || null
                 }
             });
-        // case actions.SET_BTNGRP_VALUE:
-        //     return Object.assign({}, state, {
-        //         selectedButtonGroupButton: action.value
-        //     });
+        case actions.SET_BTNGRP_VALUE:
+            return Object.assign({}, state, {
+                selectedButtonGroupButton: action.value
+            });
         default:
             return state;
     }

@@ -15,11 +15,7 @@ describe('Dashboard action tests', () => {
         const store = mockStore({});
 
         store.dispatch(getInstructions());
-        const dispatchedActions = store.getActions();
-
-        expect(dispatchedActions.length).toBe(1);
-        expect(dispatchedActions[0].type).toEqual(actions.GET_TEXT);
-        expect(dispatchedActions[0].text).toEqual(text);
+        expect(store.getActions()).toMatchSnapshot();
         done();
     });
 
@@ -28,11 +24,9 @@ describe('Dashboard action tests', () => {
         const store = mockStore({});
 
         store.dispatch(getAsyncResult());
-        const dispatchedActions = store.getActions();
 
-        expect(dispatchedActions.length).toBe(1);
-        expect(dispatchedActions[0].type).toEqual(actions.GET_DATA_ASYNC);
-        expect(await dispatchedActions[0].promise).toEqual(text);
+        expect(await store.getActions()[0].promise).toMatchSnapshot();
+        // expect().toEqual(text);
         done();
     });
 });

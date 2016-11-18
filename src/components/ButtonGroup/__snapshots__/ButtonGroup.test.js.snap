@@ -17,9 +17,7 @@ exports[`ButtonGroup renders label for group and buttons for each item in button
           "marginBottom": 5,
         },
       ]
-    }>
-    foo
-  </Text>
+    } />
   <View
     style={
       Object {

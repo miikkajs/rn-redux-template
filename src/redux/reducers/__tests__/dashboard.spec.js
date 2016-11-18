@@ -11,7 +11,8 @@ describe('Dashboard reducer tests', () => {
             status: results.ASYNC_RESULT_NONE,
             result: null,
             error: null,
-        }
+        },
+        selectedButtonGroupButton: "cat",
     };
 
     it('Should return initial state', (done) => {
@@ -22,8 +23,7 @@ describe('Dashboard reducer tests', () => {
     it('Should return text', (done) => {
         const action = {type: actions.GET_TEXT, text: 'foo'};
         const newState = reducer(undefined, action);
-        expect(newState.text).toEqual(action.text);
-        expect(newState.data).toEqual(initialState.data);
+        expect(newState).toMatchSnapshot();
         done();
     });
 
@@ -34,10 +34,7 @@ describe('Dashboard reducer tests', () => {
             result: 'Promise was resolved with this text'
         };
         const oldState = {data: {...initialState.data, error: new Error('foo')}};
-        const newState = reducer(oldState, action);
-        expect(newState.data.status).toEqual(results.ASYNC_RESULT_SUCCESS);
-        expect(newState.data.result).toEqual(action.result);
-        expect(newState.data.error).toEqual(null);
+        expect(reducer(oldState, action)).toMatchSnapshot();
         done();
     });
 
