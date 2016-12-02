@@ -2,12 +2,17 @@
 This is a React Native project template with redux, navigator, sidemenu (drawer) and [icons](https://github.com/oblador/react-native-vector-icons). The motivation of this project is to make it easier (for me or anyone else) to start a fresh RN project with redux, and with the examples provided maybe even learn something new!
 
 ## iOS
-Does not exist yet
+Installation:
+  - clone the repo
+  - npm install
+  - react-native link react-native-vector-icons
+  - react-native run-ios
 
 ## Android
 Installation:
   - clone the repo
   - npm install
+  - react-native link react-native-vector-icons
   - react-native run-android
   
 ## Features
